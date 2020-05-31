@@ -12,6 +12,7 @@ module.exports = {
   },
 
   postProviders: (req, callback) => {
+    console.log('from postProviders: ', req.body);
     db.query(
       `INSERT INTO Providers (name) VALUES ('${req.body.name}');`,
       (err, results) => {
@@ -55,9 +56,9 @@ module.exports = {
 
   getDistributors: (req, callback) => {
     console.log(`you're in dbhelpers.getDistributors`);
-    console.log(req.body);
+    console.log(`getDistributors: `, req.query);
     db.query(
-      `SELECT * FROM Distributors WHERE zipcode = ${req.body.zipcode};`,
+      `SELECT * FROM Distributors WHERE zipcode = ${req.query.zipcode};`,
       (err, results) => {
         if (err) {
           callback(err);

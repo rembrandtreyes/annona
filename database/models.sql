@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS nofoodleftbehind;
+DROP DATABASE IF EXISTS annona;
 
-CREATE DATABASE nofoodleftbehind;
+CREATE DATABASE annona;
 
-\c nofoodleftbehind;
+\c annona;
 
 CREATE TABLE Citizens (
     id serial primary key,
@@ -18,7 +18,8 @@ CREATE TABLE Tag (
 CREATE TABLE Providers (
     id serial primary key,
     kind varchar(255),
-    name varchar(255)
+    name varchar(255),
+    zipcode int
 );
 
 CREATE TABLE Distributors (
