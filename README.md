@@ -2,7 +2,7 @@
 
 ### If you have postgres installed and want to run it locally:
 
-#### Go into the .env file and edit postgres settings do your own environment
+#### Go into the .env file and edit postgres settings to your own environment
 
 ##### -ie: change `PGUSER: ''` to your postgres user role & password if you've set one
 
