@@ -2,12 +2,12 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "react-router-dom"
 
-const Hero = (props) => {
+const Hero = () => {
   return (
     <HeroContainer>
       <OverlayContainer>
         <h2>Food shortage is on the rise!</h2>
-        <h2>If you are searching for a food pantry</h2>
+        <h2>Let's end food waste on crop at a time</h2>
         <StyledLink to="/food">Find a provider near you</StyledLink>
       </OverlayContainer>
     </HeroContainer>
@@ -38,7 +38,8 @@ export const StyledLink = styled(Link)`
   background-color: #f26a4b;
   color: #f2f2f2;
   font-weight: 600;
-  box-shadow: 0px 3px 6px #313c40;
+  box-shadow: 0px 1px 4px #313c40;
+  border-radius: 4px;
 `
 
 export const HeroContainer = styled.div`

@@ -9,16 +9,16 @@ const Navbar = () => {
       path: "/",
     },
     {
-      title: "About",
-      path: "/about",
+      title: "Mission",
+      path: "/mission",
     },
     {
       title: "Donate",
       path: "/donate",
     },
     {
-      title: "Find a Food Bank",
-      path: "/find",
+      title: "Locate",
+      path: "/locate",
     },
     {
       title: "Contact",
@@ -28,7 +28,9 @@ const Navbar = () => {
 
   return (
     <NavbarWrapper>
-      <LogoWrapper>Logo</LogoWrapper>
+      <LogoWrapper>
+        <span role="img" aria-label="Canned Food">🥫</span>
+      </LogoWrapper>
       <div>
         {links.map(({ title, path }) => (
           <StyledLinks className="navbar-links" to={path}>
@@ -45,15 +47,20 @@ export const NavbarWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 75px;
+  padding: 0 24px;
 `
 
 export const LogoWrapper = styled.div`
   padding: 25px;
+  
+  span {
+    font-size: 42px;
+  }
 `
 
 export const StyledLinks = styled(Link)`
   padding: 25px;
-  color: #313C40;
+  color: #313c40;
   text-decoration: none;
   font-weight: 600;
 `
