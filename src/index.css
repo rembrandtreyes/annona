@@ -21,7 +21,6 @@ code {
   flex-direction: column;
   justify-content: center;
   background-color: yellow;
-  opacity: 0.3;
 }
 
 .navbar-container {
@@ -57,12 +56,7 @@ code {
   /* align-self: center; */
 }
 
-.homepage-page {
-  width: 95%;
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-}
+
 
 .footer-component {
   width: 95%;
