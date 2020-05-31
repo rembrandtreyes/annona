@@ -1,12 +1,14 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "react-router-dom"
 
 const Hero = (props) => {
   return (
     <HeroContainer>
       <OverlayContainer>
-        <h1>No Food Left Behind</h1>
-        <button>Learn more about contributing to 0 waste</button>
+        <h2>Food shortage is on the rise!</h2>
+        <h2>If you are searching for a food pantry</h2>
+        <StyledLink to="/food">Find a provider near you</StyledLink>
       </OverlayContainer>
     </HeroContainer>
   )
@@ -23,7 +25,20 @@ export const OverlayContainer = styled.div`
   align-items: flex-start;
   margin-top: 0px;
   padding: 16px 60px;
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(49, 60, 64, 0.75);
+
+  h2 {
+    color: #f2f2f2;
+  }
+`
+
+export const StyledLink = styled(Link)`
+  padding: 16px 24px;
+  text-decoration: none;
+  background-color: #f26a4b;
+  color: #f2f2f2;
+  font-weight: 600;
+  box-shadow: 0px 3px 6px #313c40;
 `
 
 export const HeroContainer = styled.div`
@@ -34,7 +49,7 @@ export const HeroContainer = styled.div`
   background-position: center center;
   background-size: cover;
   justify-content: flex-end;
-  margin-bottom: 125px;
+  margin-bottom: 150px;
 `
 
 export default Hero
