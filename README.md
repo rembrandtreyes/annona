@@ -4,7 +4,9 @@
 
 #### Go into the .env file and edit postgres settings do your own environment
 
-##### -ie: change `PGUSER: ''` to your postgres user role
+##### -ie: change `PGUSER: ''` to your postgres user role & password if you've set one
+
+##### -(if password, see commented connection string in database/index.js and set up .env accordingly)
 
 #### Start localhost server
 
