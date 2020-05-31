@@ -1,33 +1,17 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Welcome to No Food Left Behind
 
-## Available Scripts
+We are a group of individuals committed to helping people find the resources they need
+to learn about eliminating food waste. When we waste food, we waste the resources to 
+produce it, including land, water, energy. This project is geared towards the donors
+and recipients in mind.
 
-In the project directory, you can run:
+## Interested in contributing?
+This project uses [yarn](https://classic.yarnpkg.com/en/) for its dependency management.
+If you do not have yarn installed please follow these [instructions](https://classic.yarnpkg.com/en/) to install yarn on your machine.
 
-### `yarn install`
-Install all dependencies using yarn
-
-### `yarn start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-
+1. Change into a directory you would like to save this project
+2. `git clone https://github.com/No-Crop-Left-Behind/no-food-left-behind-client.git`
+3. `cd no-food-left-behind-client`
+4. `yarn install`
+5. `yarn start`
+6. Head to https://localhost:3000
