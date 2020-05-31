@@ -17,8 +17,8 @@ const Navbar = () => {
       path: "/donate",
     },
     {
-      title: "Locate",
-      path: "/locate",
+      title: "Distributor",
+      path: "/distributor",
     },
     {
       title: "Contact",
@@ -29,11 +29,13 @@ const Navbar = () => {
   return (
     <NavbarWrapper>
       <LogoWrapper>
-        <span role="img" aria-label="Canned Food">🥫</span>
+        <span role="img" aria-label="Canned Food">
+          🥫
+        </span>
       </LogoWrapper>
       <div>
         {links.map(({ title, path }) => (
-          <StyledLinks className="navbar-links" to={path}>
+          <StyledLinks key={title} className="navbar-links" to={path}>
             {title}
           </StyledLinks>
         ))}
@@ -52,7 +54,7 @@ export const NavbarWrapper = styled.div`
 
 export const LogoWrapper = styled.div`
   padding: 25px;
-  
+
   span {
     font-size: 42px;
   }
