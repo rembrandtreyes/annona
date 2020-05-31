@@ -4,7 +4,7 @@ CREATE DATABASE nofoodleftbehind;
 
 \c nofoodleftbehind;
 
-CREATE TABLE Users (
+CREATE TABLE Citizens (
     id serial primary key,
     email varchar(255),
     username varchar(255),
@@ -18,11 +18,12 @@ CREATE TABLE Tag (
 CREATE TABLE Providers (
     id serial primary key,
     kind varchar(255),
-    name varchar(255),
-    zipcode int
+    name varchar(255)
 );
 
 CREATE TABLE Distributors (
     id serial primary key,
-    kind varchar(255)
+    kind varchar(255),
+    name varchar(255),
+    zipcode int
 );
