@@ -14,4 +14,8 @@
 
 #### Start local postgres server
 
+##### - `pg_ctl -D /usr/local/var/postgres start`
+
+#### Run the database model
+
 ##### -run `i\ database/models.sql` in the repo directory
