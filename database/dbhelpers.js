@@ -2,13 +2,17 @@ const db = require('../database/index');
 
 module.exports = {
   getProviders: (req, callback) => {
-    db.query(`SELECT * FROM Providers;`, (err, results) => {
-      if (err) {
-        callback(err);
-      } else {
-        callback(null, results);
+    console.log('from getProviders: ', req.query);
+    db.query(
+      `SELECT * FROM Providers WHERE zipcode = ${req.query.zipcode};`,
+      (err, results) => {
+        if (err) {
+          callback(err);
+        } else {
+          callback(null, results);
+        }
       }
-    });
+    );
   },
 
   postProviders: (req, callback) => {

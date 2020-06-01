@@ -16,7 +16,6 @@ module.exports = {
 
   postProviders: (req, res) => {
     console.log(`you're in controller.postProviders`);
-    console.log(req.body);
     dbhelper.postProviders(req, (err, results) => {
       if (err) {
         console.log(err);
