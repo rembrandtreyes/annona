@@ -2,7 +2,7 @@ const db = require('../database/index');
 
 module.exports = {
   getProviders: (req, callback) => {
-    console.log('from getProviders: ', req.query);
+    console.log('from dbhelpers.getProviders: ', req.query);
     db.query(
       `SELECT * FROM Providers WHERE zipcode = ${req.query.zipcode};`,
       (err, results) => {
@@ -18,7 +18,7 @@ module.exports = {
   postProviders: (req, callback) => {
     console.log('from postProviders: ', req.body);
     db.query(
-      `INSERT INTO Providers (name) VALUES ('${req.body.name}');`,
+      `INSERT INTO Providers (name, kind, email, zipcode) VALUES ('${req.body.name}', '${req.body.kind}', '${req.body.email}', '${req.body.zipcode}');`,
       (err, results) => {
         if (err) {
           callback(err);
