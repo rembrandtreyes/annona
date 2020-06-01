@@ -1,5 +1,7 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "react-router-dom"
+
 import Hero, { StyledLink } from "../components/Hero"
 import color from "../config/color"
 
@@ -23,8 +25,10 @@ export const SubHeaderWrapper = styled.div`
 
 export const SectionWrapper = styled.div`
   background-color: ${color.dark};
-  min-height: 600px;
+  min-height: 500px;
   padding: 60px 0;
+
+  display: flex;
 
   h3 {
     color: ${color.light};
@@ -40,6 +44,7 @@ export const SectionContainer = styled.div`
 
   h3 {
     margin-bottom: 32px;
+    text-align: center;
   }
 `
 
@@ -64,6 +69,7 @@ export const ImageContainer = styled.div`
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  margin: 24px;
 
   span {
     padding: 24px;
@@ -73,6 +79,15 @@ export const ImageContainer = styled.div`
   }
 `
 
+export const HelpWrapper = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+`
+
+export const HelpLink = styled(Link)`
+  text-decoration: none;
+`
+
 const HomePage = (props) => {
   return (
     <div className="homepage-page">
@@ -80,23 +95,26 @@ const HomePage = (props) => {
       <SubHeaderWrapper>
         <HomeHeader>Let's work together</HomeHeader>
         <ContentWrapper>
-          <span>annona</span> will help you make food choices that will do
-          less harm to the environment, eliminate waste, and help people in
-          need.
+          <span>annona</span> will help you make food choices that will do less
+          harm to the environment, eliminate waste, and help people in need.
         </ContentWrapper>
         <LearnMoreLink to="/mission">Learn More</LearnMoreLink>
       </SubHeaderWrapper>
       <SectionWrapper>
         <SectionContainer>
           <h3>What can I do?</h3>
-          <div>
-            <ImageContainer imageUrl="https://res.cloudinary.com/dfxj5hpgc/image/upload/v1590953228/food-donations-960x640_b6yri1.jpg">
-              <span>Donate</span>
-            </ImageContainer>
-            <ImageContainer imageUrl="https://res.cloudinary.com/dfxj5hpgc/image/upload/v1590953228/food-donations-960x640_b6yri1.jpg">
-              <span>Provide</span>
-            </ImageContainer>
-          </div>
+          <HelpWrapper>
+            <HelpLink to="/donors">
+              <ImageContainer imageUrl="https://res.cloudinary.com/dfxj5hpgc/image/upload/v1590953228/food-donations-960x640_b6yri1.jpg">
+                <span>Donate</span>
+              </ImageContainer>
+            </HelpLink>
+            <HelpLink to="/distributors">
+              <ImageContainer imageUrl="https://res.cloudinary.com/dfxj5hpgc/image/upload/v1590987454/sharon-mccutcheon-ZQI6N_jaM_I-unsplash_ojn5jc.jpg">
+                <span>Distribute</span>
+              </ImageContainer>
+            </HelpLink>
+          </HelpWrapper>
         </SectionContainer>
       </SectionWrapper>
     </div>
