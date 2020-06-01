@@ -79,8 +79,12 @@ const DonatePage = () => {
       <div>Data</div>
       <div>{zipcode}</div>
       <div>
-        {listOfProviders.map(({ name, id }) => (
-          <div key={id}>{name}</div>
+        {listOfProviders.map(({ name, kind, email, id }) => (
+          <div key={id}>
+            <div>Name: {name}</div>
+            <div>Kind of food: {kind}</div>
+            <div>Email: {email}</div>
+          </div>
         ))}
       </div>
     </>

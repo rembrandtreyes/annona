@@ -79,8 +79,12 @@ const DistributorPage = () => {
       <div>Data</div>
       <div>{zipcode}</div>
       <div>
-        {listOfDistributors.map(({ name, id }) => (
-          <div key={id}>{name}</div>
+        {listOfDistributors.map(({ name, kind, email, id }) => (
+          <div key={id}>
+            <div>Name: {name}</div>
+            <div>Kind of food: {kind}</div>
+            <div>Email: {email}</div>
+          </div>
         ))}
       </div>
     </>
