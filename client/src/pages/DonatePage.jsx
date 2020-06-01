@@ -61,7 +61,7 @@ const DonatePage = () => {
 
   const handleSearch = (zipcode) => {
     axios
-      .get("http://ec2-54-152-0-45.compute-1.amazonaws.com:9000/providers", {
+      .get("http://ec2-54-144-45-173.compute-1.amazonaws.com:9000/providers", {
         params: {
           zipcode: zipcode,
         },
@@ -75,7 +75,7 @@ const DonatePage = () => {
 
   const handleSubmit = (name, kind, email, zipcode) => {
     axios
-      .post("http://ec2-54-152-0-45.compute-1.amazonaws.com:9000/providers", {
+      .post("http://ec2-54-144-45-173.compute-1.amazonaws.com:9000/providers", {
         name: name,
         kind: kind,
         email: email,

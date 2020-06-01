@@ -58,11 +58,14 @@ const DistributorPage = () => {
 
   const handleSearch = (zipcode) => {
     axios
-      .get("http://ec2-54-152-0-45.compute-1.amazonaws.com:9000/distributors", {
-        params: {
-          zipcode: zipcode,
-        },
-      })
+      .get(
+        "http://ec2-54-144-45-173.compute-1.amazonaws.com:9000/distributors",
+        {
+          params: {
+            zipcode: zipcode,
+          },
+        }
+      )
       .then((response) => {
         console.log(response.data.rows)
         setListOfDistributors(response.data.rows)
@@ -73,7 +76,7 @@ const DistributorPage = () => {
   const handleSubmit = (name, kind, email, zipcode) => {
     axios
       .post(
-        "http://lec2-54-152-0-45.compute-1.amazonaws.com:9000/distributors",
+        "http://lec2-54-144-45-173.compute-1.amazonaws.com:9000/distributors",
         {
           name: name,
           kind: kind,
