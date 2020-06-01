@@ -11,7 +11,7 @@ const DistributorPage = () => {
 
   const handleSearch = (zipcode) => {
     axios
-      .get("http://localhost:9000/distributors", {
+      .get("http://ec2-54-152-0-45.compute-1.amazonaws.com:9000/distributors", {
         params: {
           zipcode: zipcode,
         },
@@ -25,12 +25,15 @@ const DistributorPage = () => {
 
   const handleSubmit = (name, kind, email, zipcode) => {
     axios
-      .post("http://localhost:9000/distributors", {
-        name: name,
-        kind: kind,
-        email: email,
-        zipcode: zipcode,
-      })
+      .post(
+        "http://lec2-54-152-0-45.compute-1.amazonaws.com:9000/distributors",
+        {
+          name: name,
+          kind: kind,
+          email: email,
+          zipcode: zipcode,
+        }
+      )
       .then((response) => {
         console.log(response)
       })
