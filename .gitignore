@@ -1,1 +1,9 @@
+# MAC Files #
+.DS_Store
+
+# NPM #
 node_modules
+
+
+.pem
+.env
