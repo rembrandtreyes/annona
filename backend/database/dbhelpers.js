@@ -77,7 +77,7 @@ module.exports = {
     console.log(`you're in dbhelpers.postDistributors`);
     console.log('from dbhelpers.postDistributors: ', req.body);
     db.query(
-      `INSERT INTO Distributors (name, zipcode, kind) VALUES ('${req.body.name}', '${req.body.zipcode}', '${req.body.kind}');`,
+      `INSERT INTO Distributors (name, zipcode, kind, email) VALUES ('${req.body.name}', '${req.body.zipcode}', '${req.body.kind}', '${req.body.email}');`,
       (err, results) => {
         if (err) {
           callback(err);
