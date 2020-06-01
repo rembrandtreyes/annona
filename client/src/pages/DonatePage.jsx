@@ -121,7 +121,7 @@ const DonatePage = () => {
         </StyledButton>
       </div>
       <DonorForm>
-        <h3>Search for a distributor</h3>
+        <h3>Search for a donor</h3>
         <label>Search your zipcode</label>
         <input
           type="text"
@@ -130,7 +130,7 @@ const DonatePage = () => {
         />
       </DonorForm>
       <StyledButton onClick={() => handleSearch(zipcode)}>
-        Find a distributor!
+        Find a donor!
       </StyledButton>
       <div>
         {listOfProviders.map(({ name, kind, email, id }) => (

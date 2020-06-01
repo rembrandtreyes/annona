@@ -1,6 +1,53 @@
-import React, { useState, useEffect } from "react"
-
+import React, { useState } from "react"
+import styled from "styled-components"
 import axios from "axios"
+
+import color from "../config/color"
+
+export const DistributorWrapper = styled.div`
+  max-width: 965px;
+  margin: 0 auto;
+  min-height: 100vh;
+
+  h1 {
+    text-align: center;
+  }
+
+  h3 {
+    margin-top: 60px;
+  }
+`
+
+export const DistributorForm = styled.form`
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-size: 1.618em;
+    margin-bottom: 8px;
+  }
+
+  input {
+    height: 40px;
+    margin-bottom: 24px;
+    padding-left: 8px;
+  }
+`
+
+export const StyledButton = styled.button`
+  background-color: ${color.red1};
+  color: ${color.light};
+  font-size: 1.618em;
+  font-weight: 600;
+  width: fit-content;
+  padding: 24px;
+  border: none;
+  border-radius: 4px;
+
+  &:focus {
+    outline: none;
+  }
+`
 
 const DistributorPage = () => {
   const [name, setName] = useState("")
@@ -40,47 +87,38 @@ const DistributorPage = () => {
   }
 
   return (
-    <>
-      <div>This is our distributors page</div>
+    <DistributorWrapper>
+      <h1>Distributors</h1>
       <div>
-        <form>
+        <DistributorForm>
+          <label>Enter Name</label>
           <input
             type="text"
             placeholder="Enter Name"
             onChange={(e) => setName(e.target.value)}
           />
-          <input
-            type="text"
-            placeholder="Enter Kind of Food"
-            onChange={(e) => setKind(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Enter Email"
-            onChange={(e) => setEmail(e.target.value)}
-          />
+          <label>Enter zipcode</label>
           <input
             type="text"
             placeholder="Enter Zipcode"
             onChange={(e) => setZipcode(e.target.value)}
           />
-        </form>
-        <button onClick={() => handleSubmit(name, kind, email, zipcode)}>
+        </DistributorForm>
+        <StyledButton onClick={() => handleSubmit(name, kind, email, zipcode)}>
           Add me to the list!
-        </button>
+        </StyledButton>
       </div>
-      <form>
+      <DistributorForm>
+        <h3>Search for a distributor</h3>
         <input
           type="text"
           placeholder="Enter Zipcode"
           onChange={(e) => setZipcode(e.target.value)}
         />
-      </form>
-      <button onClick={() => handleSearch(zipcode)}>
-        Search your area for a distributor!
-      </button>
-      <div>Data</div>
-      <div>{zipcode}</div>
+      </DistributorForm>
+      <StyledButton onClick={() => handleSearch(zipcode)}>
+        Find a distributor!
+      </StyledButton>
       <div>
         {listOfDistributors.map(({ name, kind, email, id }) => (
           <div key={id}>
@@ -90,7 +128,7 @@ const DistributorPage = () => {
           </div>
         ))}
       </div>
-    </>
+    </DistributorWrapper>
   )
 }
 
