@@ -31,4 +31,4 @@
 
 #### Run the database model
 
-##### - run `i\ database/models.sql` in the repo directory
+##### - run `\i database/models.sql` in the repo directory
