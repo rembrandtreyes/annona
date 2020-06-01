@@ -2,8 +2,8 @@ import React from "react"
 import { BrowserRouter as Router, Route } from "react-router-dom"
 
 import HomePage from "./pages/HomePage"
-import AboutPage from "./pages/AboutPage"
-import ContactPage from "./pages/ContactPage"
+import MissionPage from "./pages/MissionPage"
+import ResearchPage from "./pages/ResearchPage"
 import DonatePage from "./pages/DonatePage"
 import DistributorPage from "./pages/DistributorPage"
 
@@ -19,10 +19,10 @@ const App = () => {
         <Navbar />
 
         <Route path="/" exact render={() => <HomePage />} />
-        <Route path="/about" render={() => <AboutPage />} />
-        <Route path="/donate" render={() => <DonatePage />} />
-        <Route path="/distributor" render={() => <DistributorPage />} />
-        <Route path="/contact" render={() => <ContactPage />} />
+        <Route path="/mission" render={() => <MissionPage />} />
+        <Route path="/research" render={() => <ResearchPage />} />
+        <Route path="/donors" render={() => <DonatePage />} />
+        <Route path="/distributors" render={() => <DistributorPage />} />
 
         <Footer />
       </div>

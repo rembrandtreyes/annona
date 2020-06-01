@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Hero, { StyledLink } from "../components/Hero"
-import colors from "../config/color"
+import color from "../config/color"
 
 export const HomeHeader = styled.h2`
   text-align: center;
@@ -10,6 +10,10 @@ export const HomeHeader = styled.h2`
 export const ContentWrapper = styled.p`
   margin: 40px auto;
   font-size: 1.618em;
+
+  span {
+    color: ${color.logo};
+  }
 `
 
 export const SubHeaderWrapper = styled.div`
@@ -18,12 +22,12 @@ export const SubHeaderWrapper = styled.div`
 `
 
 export const SectionWrapper = styled.div`
-  background-color: ${colors.dark};
+  background-color: ${color.dark};
   min-height: 600px;
   padding: 60px 0;
 
   h3 {
-    color: ${colors.light};
+    color: ${color.light};
   }
 `
 
@@ -64,7 +68,7 @@ export const ImageContainer = styled.div`
   span {
     padding: 24px;
     font-size: 2.618em;
-    color: ${colors.light};
+    color: ${color.light};
     font-weight: 600;
   }
 `
@@ -76,8 +80,9 @@ const HomePage = (props) => {
       <SubHeaderWrapper>
         <HomeHeader>Let's work together</HomeHeader>
         <ContentWrapper>
-          No Food Left Behind will help you make food choices that will do less
-          harm to the environment, eliminate waste, and help people in need.
+          <span>annona</span> will help you make food choices that will do
+          less harm to the environment, eliminate waste, and help people in
+          need.
         </ContentWrapper>
         <LearnMoreLink to="/mission">Learn More</LearnMoreLink>
       </SubHeaderWrapper>

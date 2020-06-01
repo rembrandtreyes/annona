@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "react-router-dom"
+import color from "../config/color"
 
 const Navbar = () => {
   const links = [
@@ -13,25 +14,27 @@ const Navbar = () => {
       path: "/mission",
     },
     {
-      title: "Donate",
-      path: "/donate",
+      title: "Research",
+      path: "/research",
     },
     {
-      title: "Distributor",
-      path: "/distributor",
+      title: "Donors",
+      path: "/donors",
     },
     {
-      title: "Contact",
-      path: "/contact",
+      title: "Distributors",
+      path: "/distributors",
     },
   ]
 
   return (
     <NavbarWrapper>
       <LogoWrapper>
-        <span role="img" aria-label="Canned Food">
-          🥫
-        </span>
+        <img
+          src="https://res.cloudinary.com/dfxj5hpgc/image/upload/v1590980349/wreath_lz7hix.png"
+          alt="Logo"
+        />
+        <span>annona</span>
       </LogoWrapper>
       <div>
         {links.map(({ title, path }) => (
@@ -54,9 +57,19 @@ export const NavbarWrapper = styled.div`
 
 export const LogoWrapper = styled.div`
   padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   span {
-    font-size: 42px;
+    margin-left: 8px;
+    font-size: 1.618em;
+    font-weight: 600;
+    color: #6aa9ff;
+  }
+
+  img {
+    height: 50px;
   }
 `
 

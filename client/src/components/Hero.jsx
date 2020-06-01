@@ -7,8 +7,8 @@ const Hero = () => {
     <HeroContainer>
       <OverlayContainer>
         <h2>Food shortage is on the rise!</h2>
-        <h2>Let's end food waste on crop at a time</h2>
-        <StyledLink to="/food">Find a provider near you</StyledLink>
+        <h3>Let's end food waste one crop at a time</h3>
+        <StyledLink to="/distributors">Find a distributor near you</StyledLink>
       </OverlayContainer>
     </HeroContainer>
   )
@@ -27,8 +27,9 @@ export const OverlayContainer = styled.div`
   padding: 16px 60px;
   background: rgba(49, 60, 64, 0.75);
 
-  h2 {
+  h2, h3 {
     color: #f2f2f2;
+    margin-bottom: 24px;
   }
 `
 
